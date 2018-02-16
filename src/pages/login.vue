@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="buttons">
-        <div class="button login">Login</div>
+        <div class="button login" @click="login">Login</div>
         <div class="button">Sign up</div>
       </div>
       <div class="privacy">
@@ -27,11 +27,14 @@
 </template>
 
 <script>
+import api from '../api'
 export default {
   name: 'Login',
   data () {
     return {
-      active: true
+      active: true,
+      mail: 'test4@lukas.work',
+      password: '123456789'
     }
   },
   methods: {
@@ -43,6 +46,41 @@ export default {
         this.active = false
         this.$refs.password.focus()
       }
+    },
+    login () {
+      const { mail, password } = this
+      api
+        .request('post', '/login', { mail, password })
+        .then(response => {
+          // this.toggleLoading()
+          var data = response.data
+          /* Checking if error object was returned from the server */
+          if (data.error) {
+            var errorName = data.error.name
+            if (errorName) {
+              this.response =
+                errorName === 'InvalidCredentialsError'
+                  ? 'Username/Password incorrect. Please try again.'
+                  : errorName
+            } else {
+              this.response = data.error
+            }
+            return
+          }
+          if (data.status) {
+            this.$store.commit('SET_TOKEN', data.token)
+            if (window.localStorage) {
+              window.localStorage.setItem('token', data.token)
+            }
+            this.$router.push(data.redirect ? data.redirect : '/')
+          }
+        })
+        .catch(error => {
+          //  this.$store.commit('TOGGLE_LOADING')
+          console.log(error)
+          this.response = 'Server appears to be offline'
+          //  this.toggleLoading()
+        })
     }
   }
 }

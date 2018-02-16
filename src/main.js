@@ -24,7 +24,7 @@ router.beforeEach((to, from, next) => {
     window.console.log('Not authenticated')
     next({
       path: '/login',
-      query: { redirect: to.fullPath }
+      query: {redirect: to.fullPath}
     })
   } else {
     next()
@@ -35,12 +35,7 @@ sync(store, router)
 
 // Check local storage to handle refreshes
 if (window.localStorage) {
-  var localUserString = window.localStorage.getItem('user') || 'null'
-  var localUser = JSON.parse(localUserString)
-
-  if (localUser && store.state.user !== localUser) {
-    store.commit('SET_TOKEN', window.localStorage.getItem('token'))
-  }
+  store.commit('SET_TOKEN', window.localStorage.getItem('token'))
 }
 
 /* eslint-disable no-new */
