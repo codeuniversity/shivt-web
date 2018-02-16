@@ -1,4 +1,4 @@
-# shivt-web
+![alt logo](https://i.imgur.com/mfVduvv.png)
 
 > web configurator for the shivt app
 
