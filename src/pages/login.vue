@@ -1,92 +1,106 @@
 <template>
   <div class="loginPage">
-    <div class="window">
-      <div class="logo"></div>
-      <div class="intro">Welcome back!</div>
-      <div class="introSub">Please login to your account.</div>
-      <div class="inputs">
-        <div class="input" :class="{active: active}" @click="setFocus('mail')">
-          <div class="text">Email Address</div>
-          <input type="email" ref="email" v-model="mail" placeholder="demo@shivt.io" autofocus/>
+    <transition transition="fadeLeft" appear>
+      <div class="window">
+        <div class="logo"></div>
+        <div class="intro">Welcome back!</div>
+        <div class="introSub">Please login to your account.</div>
+        <div class="inputs">
+          <div class="input" :class="{active: active}" @click="setFocus('mail')">
+            <div class="text">Email Address</div>
+            <input type="email" ref="email" v-model="mail" placeholder="demo@shivt.io" autofocus/>
+          </div>
+          <div class="input" :class="{active: !active}" @click="setFocus">
+            <div class="text">Password</div>
+            <input type="password" ref="password" v-model="password" placeholder="***********"/>
+          </div>
         </div>
-        <div class="input" :class="{active: !active}" @click="setFocus">
-          <div class="text">Password</div>
-          <input type="password" ref="password" v-model="password" placeholder="***********"/>
+        <div class="buttons">
+          <div class="button login" @click="login">Login</div>
+          <div class="button">Sign up</div>
+        </div>
+        <div class="privacy">
+          By signing up, you agree to Shivt's<br/>
+          <span>Terms and Conditions</span> & <span>Privacy Policy</span>
         </div>
       </div>
-      <div class="buttons">
-        <div class="button login" @click="login">Login</div>
-        <div class="button">Sign up</div>
-      </div>
-      <div class="privacy">
-        By signing up, you agree to Shivt's<br/>
-        <span>Terms and Conditions</span> & <span>Privacy Policy</span>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
-import api from '../api'
-export default {
-  name: 'Login',
-  data () {
-    return {
-      active: true,
-      mail: null,
-      password: null
-    }
-  },
-  methods: {
-    setFocus (type) {
-      if (type === 'mail') {
-        this.active = true
-        this.$refs.email.focus()
-      } else {
-        this.active = false
-        this.$refs.password.focus()
+  import api from '../api'
+
+  export default {
+    name: 'Login',
+    data () {
+      return {
+        active: true,
+        mail: null,
+        password: null
       }
     },
-    login () {
-      const { mail, password } = this
-      api
-        .request('post', '/login', { mail, password })
-        .then(response => {
-          // this.toggleLoading()
-          var data = response.data
-          /* Checking if error object was returned from the server */
-          if (data.error) {
-            var errorName = data.error.name
-            if (errorName) {
-              this.response =
-                errorName === 'InvalidCredentialsError'
-                  ? 'Username/Password incorrect. Please try again.'
-                  : errorName
-            } else {
-              this.response = data.error
+    methods: {
+      setFocus (type) {
+        if (type === 'mail') {
+          this.active = true
+          this.$refs.email.focus()
+        } else {
+          this.active = false
+          this.$refs.password.focus()
+        }
+      },
+      login () {
+        this.$Progress.start()
+        const {mail, password} = this
+        api
+          .request('post', '/login', {mail, password})
+          .then(response => {
+            // this.toggleLoading()
+            var data = response.data
+            /* Checking if error object was returned from the server */
+            if (data.error) {
+              var errorName = data.error.name
+              if (errorName) {
+                this.response =
+                  errorName === 'InvalidCredentialsError'
+                    ? 'Username/Password incorrect. Please try again.'
+                    : errorName
+              } else {
+                this.response = data.error
+              }
+              return
             }
-            return
-          }
-          if (data.status) {
-            this.$store.commit('SET_TOKEN', data.token)
-            if (window.localStorage) {
-              window.localStorage.setItem('token', data.token)
+            if (data.status) {
+              this.$store.commit('SET_TOKEN', data.token)
+              if (window.localStorage) {
+                window.localStorage.setItem('token', data.token)
+              }
+              this.$router.push(data.redirect ? data.redirect : '/')
             }
-            this.$router.push(data.redirect ? data.redirect : '/')
-          }
-        })
-        .catch(error => {
-          //  this.$store.commit('TOGGLE_LOADING')
-          console.log(error)
-          this.response = 'Server appears to be offline'
-          //  this.toggleLoading()
-        })
+            this.$Progress.finish()
+          })
+          .catch(error => {
+            //  this.$store.commit('TOGGLE_LOADING')
+            console.log(error)
+            this.$Progress.finish()
+            this.response = 'Server appears to be offline'
+            //  this.toggleLoading()
+          })
+      }
     }
   }
-}
 </script>
 
 <style lang="less">
+  .fade-enter-active, .fade-leave-active {
+    transition: all .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+
   body {
     background-color: #f7f7f7;
     margin: 0px;

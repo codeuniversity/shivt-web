@@ -9,6 +9,7 @@
           <a class="link">Employees</a>
           <a class="link">Shifts</a>
           <a class="link">Settings</a>
+          <a class="link" @click="logout">Logout</a>
         </div>
       </div>
     </header>
@@ -16,6 +17,23 @@
 </template>
 
 <script>
+  export default {
+    name: 'App',
+    data () {
+      return {
+        section: 'Head'
+      }
+    },
+    methods: {
+      logout () {
+        this.$store.commit('SET_TOKEN', null)
+        if (window.localStorage) {
+          window.localStorage.setItem('token', null)
+        }
+        this.$router.push('/login')
+      }
+    }
+  }
 </script>
 
 <style lang="less" scoped>

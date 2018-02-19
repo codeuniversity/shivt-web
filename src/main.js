@@ -2,12 +2,28 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueProgressBar from 'vue-progressbar'
 
 import App from './components/app'
 
 import { sync } from 'vuex-router-sync'
 import routes from './routes'
 import store from './store'
+
+const VueProgressBarOptions = {
+  color: '#00ffa8',
+  failedColor: '#874b4b',
+  thickness: '4px',
+  transition: {
+    speed: '0.2s',
+    opacity: '0.6s',
+    termination: 300
+  },
+  location: 'top'
+}
+
+Vue.use(VueProgressBar, VueProgressBarOptions)
+
 
 Vue.use(VueRouter)
 
