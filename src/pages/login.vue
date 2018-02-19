@@ -7,11 +7,11 @@
       <div class="inputs">
         <div class="input" :class="{active: active}" @click="setFocus('mail')">
           <div class="text">Email Address</div>
-          <input type="email" ref="email" placeholder="demo@shivt.io" autofocus/>
+          <input type="email" ref="email" v-model="mail" placeholder="demo@shivt.io" autofocus/>
         </div>
         <div class="input" :class="{active: !active}" @click="setFocus">
           <div class="text">Password</div>
-          <input ref="password" type="password" placeholder="***********"/>
+          <input type="password" ref="password" v-model="password" placeholder="***********"/>
         </div>
       </div>
       <div class="buttons">
@@ -33,8 +33,8 @@ export default {
   data () {
     return {
       active: true,
-      mail: 'test4@lukas.work',
-      password: '123456789'
+      mail: null,
+      password: null
     }
   },
   methods: {
