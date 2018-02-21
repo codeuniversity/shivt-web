@@ -75,7 +75,7 @@ header{
         font-size: 12px;
         text-transform: uppercase;
         font-weight: 600;
-        padding: 25px 10px 10px 10px;
+        padding: 25px 10px 21px 10px;
         color: #3e446f;
         .mdi-icon{
           margin-top: -6px;

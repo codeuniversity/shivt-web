@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="width-12 noM">
+    <div class="width-12">
       <div class="width-6">
         <div class="box" @click="test">
           <div class="box-heading">
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Dashboard',
   methods: {
     test() {
       this.$notify({

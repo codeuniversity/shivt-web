@@ -2,7 +2,7 @@
   <div id="app">
     <vue-progress-bar></vue-progress-bar>
     <router-view></router-view>
-    <notifications class="notify" group="foo"/>
+    <notifications class="notify" group="foo" position="bottom right"/>
   </div>
 </template>
 
@@ -32,10 +32,11 @@
 
   .notify {
     right: 10px !important;
-    top: 10px !important;
+    bottom: 10px !important;
     .vue-notification {
+      border-radius: 2px;
+      padding: 15px;
       &.success {
-        border-radius: 2px;
         border: none;
         background-color: #6befaa;
       }
