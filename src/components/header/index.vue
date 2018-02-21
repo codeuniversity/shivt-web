@@ -1,22 +1,25 @@
 <template>
-  <div>
-    <header>
-      <div class="center">
-        <div class="logo"></div>
-        <div class="menu">
-          <a class="link active">Dashboard</a>
-          <a class="link">Event</a>
-          <a class="link">Employees</a>
-          <a class="link">Shifts</a>
-          <a class="link">Settings</a>
-          <a class="link" @click="logout">Logout</a>
+  <header>
+    <div class="center">
+      <div class="logo"></div>
+      <div class="switcher">
+        <div class="current">unicon - hosted at CODE
+          <mdi-menu-down-icon/>
         </div>
       </div>
-    </header>
-  </div>
+      <div class="menu">
+        <a class="link active">Dashboard</a>
+        <a class="link">Employees</a>
+        <a class="link">Shifts</a>
+        <a class="link">Settings</a>
+        <a class="link" @click="logout">Logout</a>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
+  import 'mdi-vue/menuDownIcon'
   export default {
     name: 'App',
     data () {
@@ -46,6 +49,7 @@ header{
   top: 0px;
   left: 0px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+  z-index: 1;
   .center{
     width: 1200px;
     position: relative;
@@ -54,12 +58,31 @@ header{
     float: left;
     .logo{
       background-image: url(../../assets/logo.png);
-      width: 200px;
+      width: 50px;
       height: 58px;
-      background-size: 100%;
+      background-size: 200px;
       background-repeat: no-repeat;
       margin-top: 7px;
       float: left;
+      cursor: pointer;
+    }
+    .switcher{
+      float: left;
+      margin-left: 20px;
+      cursor: pointer;
+      .current{
+        float: left;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 25px 10px 10px 10px;
+        color: #3e446f;
+        .mdi-icon{
+          margin-top: -6px;
+          float: right;
+          margin-left: 5px;
+        }
+      }
     }
     .menu{
       float: right;

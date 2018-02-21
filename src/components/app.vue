@@ -2,30 +2,43 @@
   <div id="app">
     <vue-progress-bar></vue-progress-bar>
     <router-view></router-view>
+    <notifications class="notify" group="foo"/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  mounted () {
-    this.$Progress.finish()
-  },
-  created () {
-    this.$Progress.start()
-    this.$router.beforeEach((to, from, next) => {
-      this.$Progress.start()
-      next()
-    })
-    this.$router.afterEach((to, from) => {
+  export default {
+    name: 'App',
+    mounted () {
       this.$Progress.finish()
-    })
+    },
+    created () {
+      this.$Progress.start()
+      this.$router.beforeEach((to, from, next) => {
+        this.$Progress.start()
+        next()
+      })
+      this.$router.afterEach((to, from) => {
+        this.$Progress.finish()
+      })
+    }
   }
-}
 </script>
-<style>
+<style lang="less">
   * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+  }
+
+  .notify {
+    right: 10px !important;
+    top: 10px !important;
+    .vue-notification {
+      &.success {
+        border-radius: 2px;
+        border: none;
+        background-color: #6befaa;
+      }
+    }
   }
 </style>

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueProgressBar from 'vue-progressbar'
+import Notifications from 'vue-notification'
 
 import App from './components/app'
 
@@ -22,8 +23,11 @@ const VueProgressBarOptions = {
   location: 'top'
 }
 
+
 Vue.use(VueProgressBar, VueProgressBarOptions)
 
+
+Vue.use(Notifications)
 
 Vue.use(VueRouter)
 

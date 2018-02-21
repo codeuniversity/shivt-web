@@ -13,7 +13,9 @@
   "dependencies": {
     "axios": "^0.17.1",
     "css-loader": "^0.28.9",
+    "mdi-vue": "^0.2.11",
     "vue": "^2.5.2",
+    "vue-notification": "^1.3.7",
     "vue-progressbar": "^0.7.3",
     "vue-router": "^3.0.1",
     "vue2-animate": "^1.0.4",
