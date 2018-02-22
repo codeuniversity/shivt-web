@@ -139,5 +139,11 @@
         background-color: #67e0a1;
       }
     }
+    .md-field.md-theme-default:before{
+      background-color: #6befaa !important;
+    }
+    .md-field.md-theme-default.md-focused label{
+      color: #6befaa !important;
+    }
   }
 </style>

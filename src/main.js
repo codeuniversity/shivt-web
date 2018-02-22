@@ -6,6 +6,7 @@ import VueProgressBar from 'vue-progressbar'
 import Notifications from 'vue-notification'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 
 import App from './components/app'
 import { sync } from 'vuex-router-sync'

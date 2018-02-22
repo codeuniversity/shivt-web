@@ -13,7 +13,12 @@
           </div>
         </div>
         <div class="box-body">
-          <div class="md-title">Material Design with Vue.js 2 Demo</div>
+          <md-field>
+            <label for="first-name">First Name</label>
+            <md-input name="first-name" id="first-name" autocomplete="given-name" v-model="form.firstName" />
+            <span class="md-error">The first name is required</span>
+            <span class="md-error">Invalid first name</span>
+          </md-field>
         </div>
       </div>
     </div>
@@ -28,6 +33,13 @@
       active: {
         type: Boolean,
         required: true
+      }
+    },
+    data(){
+      return {
+        form: {
+          firstName: null
+        }
       }
     },
     methods: {
