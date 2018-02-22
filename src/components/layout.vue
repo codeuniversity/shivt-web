@@ -57,6 +57,12 @@
           }
           .options{
             float: right;
+            .mdi-icon{
+              cursor: pointer;
+              &:hover{
+                fill: #484848;
+              }
+            }
           }
         }
         .box-body{

@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="width-12">
-      <div class="box" @click="test">
+      <div class="box">
         <div class="box-heading">
           <div class="text">
             <h2>Employees</h2>
             <small>Manage your staff.</small>
           </div>
           <div class="options">
-            <button>Add employee</button>
+            <button @click="openPopup">Add employee</button>
           </div>
         </div>
         <div class="table">
@@ -28,42 +28,107 @@
             </tr>
             </thead>
             <tbody>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
-              <tr><td>Admin</td><td>Lukas</td><td>Vollmer</td><td></td></tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td>Lukas</td>
+              <td>Vollmer</td>
+              <td></td>
+            </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+    <Popup v-model="popupActive" :active="popupActive"/>
   </div>
 </template>
 
 <script>
+  import Popup from '@/components/employee/createPopup'
+
   export default {
     name: 'Employees',
+    components: {
+      Popup
+    },
+    data () {
+      return {
+        popupActive: false
+      }
+    },
     methods: {
-      test () {
-        this.$notify({
-          group: 'foo',
-          type: 'success',
-          title: 'Important message',
-          text: 'Hello user! This is a notification!',
-        })
+      openPopup(){
+        this.popupActive = true
       }
     }
   }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
 </style>
