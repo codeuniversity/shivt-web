@@ -28,7 +28,6 @@
       margin-left: -610px;
       float: left;
       .box {
-        min-height: 300px;
         margin-left: 10px;
         float: left;
         width: calc(100% - 20px);
@@ -144,6 +143,53 @@
     }
     .md-field.md-theme-default.md-focused label{
       color: #6befaa !important;
+    }
+    .md-field.md-theme-default:after {
+      background-color: rgba(0, 0, 0, 0.18);
+    }
+    .md-radio.md-theme-default.md-checked .md-radio-container {
+      border-color: #6befaa !important;
+    }
+    .md-radio.md-theme-default.md-checked .md-radio-container:after {
+      background-color: #6befaa !important;
+    }
+    .md-radio.md-theme-default .md-radio-container {
+      border-color: rgba(0,0,0,0.18) !important;
+    }
+    .md-button:hover{
+      background-color: #ffffff;
+    }
+    .md-tabs.md-theme-default .md-tabs-navigation .md-button.md-active{
+      color: #6befaa !important;
+    }
+    .md-tabs.md-theme-default .md-tabs-indicator{
+      background-color: #6befaa !important;
+    }
+    .md-steppers.md-theme-default .md-stepper-header.md-active .md-stepper-number, .md-steppers.md-theme-default .md-stepper-header.md-done .md-stepper-number{
+      background-color: #6befaa !important;
+    }
+    .nohover{
+      .md-table-row:hover:not(.md-header-row) .md-table-cell{
+        background-color: transparent !important;
+      }
+      .md-list-item:hover{
+        background-color: rgba(0,0,0,0.08);
+        cursor: pointer;
+      }
+      .option{
+        float: right;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        button{
+          float: right;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+    }
+    .md-steppers-wrapper{
+      float: left;
     }
   }
 </style>

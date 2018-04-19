@@ -110,6 +110,7 @@
 </template>
 
 <script>
+  import api from '../api'
   import Popup from '@/components/employee/createPopup'
 
   export default {
@@ -119,8 +120,38 @@
     },
     data () {
       return {
-        popupActive: false
+        popupActive: false,
+        employees: null
       }
+    },
+    beforeMount(){
+      api
+        .request('get', '/events/'+this.$store.state.projectid+'/employees', {}, {'x-access-token': this.$store.state.token, 'Content-Type': 'application/x-www-form-urlencoded'})
+        .then(response => {
+          // this.toggleLoading()
+          var data = response.data
+          console.log(data)
+          /* Checking if error object was returned from the server */
+          if (data.error) {
+            var errorName = data.error.name
+            if (errorName) {
+              this.response =
+                errorName === 'InvalidCredentialsError'
+                  ? 'Username/Password incorrect. Please try again.'
+                  : errorName
+            } else {
+              this.response = data.error
+            }
+            return
+          }
+          this.$Progress.finish()
+        })
+        .catch(error => {
+          this.$Progress.finish()
+          this.response = 'Server appears to be offline'
+          //  this.toggleLoading()
+        })
+      console.log('test', this.$store.state.projectid)
     },
     methods: {
       openPopup(){

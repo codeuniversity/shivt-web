@@ -8,9 +8,9 @@
         </div>
       </div>
       <div class="menu">
-        <a class="link active">Dashboard</a>
-        <a class="link">Employees</a>
-        <a class="link">Shifts</a>
+        <router-link class="link" :to="{name: 'dashboard'}">Dashboard</router-link>
+        <router-link class="link" :to="{name: 'employees'}">Employees</router-link>
+        <router-link class="link" :to="{name: 'shifts'}">Shifts</router-link>
         <a class="link">Settings</a>
         <a class="link" @click="logout">Logout</a>
       </div>

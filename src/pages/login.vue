@@ -73,8 +73,10 @@
             }
             if (data.status) {
               this.$store.commit('SET_TOKEN', data.token)
+              this.$store.commit('SET_PROJECTID', data.id)
               if (window.localStorage) {
                 window.localStorage.setItem('token', data.token)
+                window.localStorage.setItem('projectid', data.id)
               }
               this.$router.push(data.redirect ? data.redirect : '/')
             }

@@ -55,6 +55,7 @@ sync(store, router)
 // Check local storage to handle refreshes
 if (window.localStorage) {
   store.commit('SET_TOKEN', window.localStorage.getItem('token'))
+  store.commit('SET_PROJECTID', window.localStorage.getItem('projectid'))
 }
 
 /* eslint-disable no-new */

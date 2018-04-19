@@ -2,6 +2,7 @@ import LoginView from '@/pages/login'
 import LayoutView from '@/components/layout'
 import DashboardView from '@/pages/dashboard'
 import EmployeesView from '@/pages/employees'
+import ShiftsView from '@/pages/shifts'
 import NotFoundView from '@/pages/notfound'
 
 const routes = [
@@ -16,13 +17,19 @@ const routes = [
       {
         path: '',
         component: DashboardView,
-        name: 'Dashboard',
+        name: 'dashboard',
         meta: {description: 'Overview of environment'}
       },
       {
         path: 'employees',
         component: EmployeesView,
-        name: 'Employees',
+        name: 'employees',
+        meta: {description: 'Overview of environment'}
+      },
+      {
+        path: 'shifts',
+        component: ShiftsView,
+        name: 'shifts',
         meta: {description: 'Overview of environment'}
       }
     ],
