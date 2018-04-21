@@ -8,7 +8,7 @@
             <small>Manage your staff.</small>
           </div>
           <div class="options">
-            <button @click="openPopup">Add employee</button>
+            <button @click="openCreatePopup">Add employee</button>
           </div>
         </div>
         <div class="table">
@@ -24,7 +24,7 @@
               <th>
                 <div class="name">Nachname</div>
               </th>
-              <th>Option</th>
+              <th></th>
             </tr>
             </thead>
             <tbody>
@@ -32,104 +32,161 @@
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td>
-                <md-button class="md-icon-button md-list-action">
-                  <mdi-border-color-icon/>
-                </md-button>
-                <md-button class="md-icon-button md-list-action">
-                  <md-icon>sms</md-icon>
-                </md-button>
-
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
               </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td class="right">
+                <div class="option">
+                  <mdi-delete-icon/>
+                </div>
+                <div class="option" @click="openUpdatePopup">
+                  <mdi-border-color-icon class="edit"/>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <td>Admin</td>
-              <td>Lukas</td>
-              <td>Vollmer</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Admin</td>
-              <td>Lukas</td>
-              <td>Vollmer</td>
-              <td></td>
-            </tr>
+
             </tbody>
           </table>
         </div>
       </div>
     </div>
-    <Popup v-model="popupActive" :active="popupActive"/>
+    <CreatePopup v-model="popupCreateActive" :active="popupCreateActive"/>
+    <UpdatePopup v-model="popupUpdateActive" :active="popupUpdateActive"/>
   </div>
 </template>
 
 <script>
   import api from '../api'
-  import Popup from '@/components/employee/createPopup'
+  import CreatePopup from '@/components/employee/createPopup'
+  import UpdatePopup from '@/components/employee/updatePopup'
   import 'mdi-vue/borderColorIcon'
+  import 'mdi-vue/deleteIcon'
+  import 'mdi-vue/viewModuleIcon'
 
   export default {
     name: 'Employees',
     components: {
-      Popup
+      CreatePopup,
+      UpdatePopup
     },
     data () {
       return {
-        popupActive: false,
+        popupCreateActive: false,
+        popupUpdateActive: false,
         employees: null
       }
     },
@@ -161,8 +218,11 @@
       console.log('test', this.$store.state.projectid)
     },
     methods: {
-      openPopup(){
-        this.popupActive = true
+      openCreatePopup(){
+        this.popupCreateActive = true
+      },
+      openUpdatePopup(){
+        this.popupUpdateActive = true
       }
     }
   }

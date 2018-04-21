@@ -5,7 +5,7 @@
       <div class="box">
         <div class="box-heading">
           <div class="text">
-            <h2>Create employee</h2>
+            <h2>Update employee</h2>
             <small>Manage your staff.</small>
           </div>
           <div class="options" @click="closePopup">
@@ -61,7 +61,7 @@
             </md-select>
           </md-field>
           <div class="options">
-            <button @click="submit">Create Employee</button>
+            <button @click="submit">Save</button>
           </div>
         </div>
       </div>

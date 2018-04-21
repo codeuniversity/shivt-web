@@ -115,8 +115,26 @@
             border-bottom: 1px solid #e6e6e6;
             color: #000;
             transition: background-color 0.2s;
-            &:hover {
-              background-color: #eee;
+            td{
+              .option{
+                float: right;
+                padding: 5px 5px 0px 5px;
+                border-radius: 3px;
+                margin-top: -6px;
+                margin-bottom: -10px;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover {
+                  background-color: #eee;
+                }
+                svg{
+                  fill: rgba(0,0,0,.54);
+                  &.edit{
+                    margin-top: 4px;
+                    margin-bottom: -4px;
+                  }
+                }
+              }
             }
           }
         }
@@ -167,6 +185,16 @@
     }
     .md-steppers.md-theme-default .md-stepper-header.md-active .md-stepper-number, .md-steppers.md-theme-default .md-stepper-header.md-done .md-stepper-number{
       background-color: #6befaa !important;
+    }
+    .md-checkbox.md-theme-default.md-checked.md-primary .md-checkbox-container {
+      background-color: #6befaa !important;
+      border-color: #6befaa !important;
+    }
+    .md-ripple-wave {
+      background-color: #6befaa !important;
+    }
+    .md-list.md-theme-default .md-selected .md-list-item-content, .md-list.md-theme-default .router-link-exact-active .md-list-item-content{
+      color: #6befaa !important;
     }
     .nohover{
       .md-table-row:hover:not(.md-header-row) .md-table-cell{
