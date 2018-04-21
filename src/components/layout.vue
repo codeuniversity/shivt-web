@@ -156,8 +156,12 @@
         background-color: #67e0a1;
       }
     }
+    .md-field.md-has-textarea{
+      border-color: #6befaa !important;
+    }
     .md-field.md-theme-default:before{
       background-color: #6befaa !important;
+      border-color: #6befaa !important;
     }
     .md-field.md-theme-default.md-focused label{
       color: #6befaa !important;
@@ -218,6 +222,10 @@
     }
     .md-steppers-wrapper{
       float: left;
+    }
+    .md-steppers-wrapper{
+      max-height: 623px;
+      overflow: auto;
     }
   }
 </style>

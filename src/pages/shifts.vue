@@ -29,87 +29,69 @@
                         <span>Location X</span>
                         <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
                       </div>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/1" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/2" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/3" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/4" alt="People">
-                      </md-avatar>
                     </md-list-item>
-                    <md-divider></md-divider>
-                    <md-list-item>
-                      <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
-                      </div>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/9" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/10" alt="People">
-                      </md-avatar>
-                    </md-list-item>
-                    <md-divider></md-divider>
-                    <md-list-item>
-                      <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
-                      </div>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/6" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/7" alt="People">
-                      </md-avatar>
-                      <md-avatar>
-                        <img src="https://placeimg.com/40/40/people/8" alt="People">
-                      </md-avatar>
-                    </md-list-item>
-                    <md-divider></md-divider>
-                    <div class="option">
-                      <button @click="openPopup">Add Shift</button>
-                    </div>
+
                   </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>5.00 am</md-table-cell>
                 <md-table-cell>
-                  <div class="option">
-                    <button @click="openPopup">Add Shift</button>
-                  </div>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Shift-Name</b>
+                        <span>Location X</span>
+                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>5.00 am</md-table-cell>
                 <md-table-cell>
-                  <div class="option">
-                    <button @click="openPopup">Add Shift</button>
-                  </div>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Shift-Name</b>
+                        <span>Location X</span>
+                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>5.00 am</md-table-cell>
                 <md-table-cell>
-                  <div class="option">
-                    <button @click="openPopup">Add Shift</button>
-                  </div>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Shift-Name</b>
+                        <span>Location X</span>
+                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>5.00 am</md-table-cell>
                 <md-table-cell>
-                  <div class="option">
-                    <button @click="openPopup">Add Shift</button>
-                  </div>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Shift-Name</b>
+                        <span>Location X</span>
+                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
                 </md-table-cell>
               </md-table-row>
             </md-table>
@@ -130,6 +112,9 @@
             <p>Maiores, dolorum. Beatae, optio tempore fuga odit aperiam velit, consequuntur magni inventore sapiente alias sequi odio qui harum dolorem sunt quasi corporis.</p>
           </md-tab>
         </md-tabs>
+        <div class="option createShift">
+          <button @click="openPopup">Add Shift</button>
+        </div>
       </div>
     </div>
     <Popup v-model="popupActive" :active="popupActive"/>
@@ -161,5 +146,10 @@
 </script>
 
 <style lang="less" scoped>
-
+.createShift{
+  float: right;
+  top: 16px;
+  position: absolute;
+  right: 27px;
+}
 </style>
