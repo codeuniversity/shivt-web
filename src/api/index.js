@@ -14,6 +14,8 @@ export default {
     }
 
     var url = config.serverURI + uri
-    return axios({ method, url, data, headers: header })
+    var req = axios({ method, url, data, headers: header })
+    var response = req.data
+    return req
   }
 }

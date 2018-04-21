@@ -32,7 +32,15 @@
               <td>Admin</td>
               <td>Lukas</td>
               <td>Vollmer</td>
-              <td></td>
+              <td>
+                <md-button class="md-icon-button md-list-action">
+                  <mdi-border-color-icon/>
+                </md-button>
+                <md-button class="md-icon-button md-list-action">
+                  <md-icon>sms</md-icon>
+                </md-button>
+
+              </td>
             </tr>
             <tr>
               <td>Admin</td>
@@ -112,6 +120,7 @@
 <script>
   import api from '../api'
   import Popup from '@/components/employee/createPopup'
+  import 'mdi-vue/borderColorIcon'
 
   export default {
     name: 'Employees',
@@ -130,8 +139,6 @@
         .then(response => {
           // this.toggleLoading()
           var data = response.data
-          console.log(data)
-          /* Checking if error object was returned from the server */
           if (data.error) {
             var errorName = data.error.name
             if (errorName) {
