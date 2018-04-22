@@ -3,21 +3,28 @@
     <transition transition="fadeLeft" appear>
       <div class="window">
         <div class="logo"></div>
-        <div class="intro">Welcome back!</div>
-        <div class="introSub">Please login to your account.</div>
+        <div class="intro">Create a Account</div>
         <div class="inputs">
           <div class="input" :class="{active: active}" @click="setFocus('mail')">
+            <div class="text">Name</div>
+            <input type="name" ref="name" v-model="mail" placeholder="demo@shivt.io" autofocus/>
+          </div>
+          <div class="input" :class="{active: active}" @click="setFocus('mail')">
             <div class="text">Email Address</div>
-            <input type="email" ref="email" v-model="mail" placeholder="demo@shivt.io" autofocus/>
+            <input type="email" ref="email" v-model="mail" placeholder="Your Name"/>
           </div>
           <div class="input" :class="{active: !active}" @click="setFocus">
             <div class="text">Password</div>
             <input type="password" ref="password" v-model="password" placeholder="***********"/>
           </div>
+          <div class="input" :class="{active: !active}" @click="setFocus">
+            <div class="text">Password Verify</div>
+            <input type="password" ref="password" v-model="password" placeholder="***********"/>
+          </div>
         </div>
         <div class="buttons">
-          <div class="button login" @click="login">Login</div>
-          <div class="button">Sign up</div>
+          <div class="button login">Sign up</div>
+          <router-link class="link" :to="{name: 'login'}"><div class="button">Login</div></router-link>
         </div>
         <div class="privacy">
           By signing up, you agree to Shivt's<br/>
@@ -112,14 +119,14 @@
       height: 100%;
       .window {
         width: 400px;
-        height: 500px;
         background-color: #fff;
+        -webkit-box-shadow: 0px 0px 65px #f5f5f5;
         box-shadow: 0px 0px 65px #f5f5f5;
         position: absolute;
         top: 50%;
         left: 50%;
         margin-left: -200px;
-        margin-top: -250px;
+        margin-top: -294px;
         padding: 20px;
         .logo {
           background-image: url(../assets/logo.png);

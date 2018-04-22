@@ -4,15 +4,23 @@ import DashboardView from '@/pages/dashboard'
 import EmployeesView from '@/pages/employees'
 import SkillsView from '@/pages/skills'
 import ShiftsView from '@/pages/shifts'
+import SignupView from '@/pages/signup'
 import NotFoundView from '@/pages/notfound'
 
 const routes = [
   {
     path: '/login',
+    name: 'login',
     component: LoginView
   },
   {
+    path: '/signup',
+    name: 'signup',
+    component: SignupView
+  },
+  {
     path: '/',
+    name: 'home',
     component: LayoutView,
     children: [
       {

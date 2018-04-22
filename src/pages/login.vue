@@ -17,7 +17,7 @@
         </div>
         <div class="buttons">
           <div class="button login" @click="login">Login</div>
-          <div class="button">Sign up</div>
+          <router-link class="link" :to="{name: 'signup'}"><div class="button">Sign up</div></router-link>
         </div>
         <div class="privacy">
           By signing up, you agree to Shivt's<br/>
