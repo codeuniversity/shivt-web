@@ -25,7 +25,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Skill 1</td>
+                <td>Barkeeper</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -33,7 +33,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Tech Sound</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -41,7 +41,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Tech Licht</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -49,7 +49,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Tech Video</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -57,7 +57,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Security</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -65,7 +65,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Driving</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -73,7 +73,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Moderator</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -81,7 +81,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>SE-System Access</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>
@@ -89,7 +89,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Skill 1</td>
+                <td>Dance</td>
                 <td class="right">
                   <div class="option">
                     <mdi-delete-icon/>

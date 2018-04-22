@@ -16,18 +16,31 @@
           <md-tab id="tab-home" md-label="27.05.2018">
             <md-table class="nohover">
               <md-table-row>
-                <md-table-head width="120px">Time</md-table-head>
+                <md-table-head width="200px">Time</md-table-head>
                 <md-table-head>Shifts</md-table-head>
               </md-table-row>
               <md-table-row>
-                <md-table-cell>5.00 am</md-table-cell>
+                <md-table-cell>9.00 am - 1 pm</md-table-cell>
                 <md-table-cell>
                   <md-list class="md-triple-line">
                     <md-list-item>
                       <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                        <b>Check-In & Welcome</b>
+                        <span>Entrance, House 3</span>
+                        <p>Check-In the participants</p>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>9.00 am - 4 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Wardrobe</b>
+                        <span>Wardrobe Room (across from the Check-In)</span>
                       </div>
                     </md-list-item>
 
@@ -35,14 +48,26 @@
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
-                <md-table-cell>5.00 am</md-table-cell>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
                 <md-table-cell>
                   <md-list class="md-triple-line">
                     <md-list-item>
                       <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                        <b>Tech - Light</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Sound</b>
+                        <span>Tech Operation</span>
                       </div>
                     </md-list-item>
 
@@ -50,47 +75,41 @@
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
-                <md-table-cell>5.00 am</md-table-cell>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
                 <md-table-cell>
                   <md-list class="md-triple-line">
                     <md-list-item>
                       <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                        <b>Tech - Video</b>
+                        <span>Tech Operation</span>
                       </div>
                     </md-list-item>
-
                   </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
-                <md-table-cell>5.00 am</md-table-cell>
+                <md-table-cell>10.00 am - 4 pm</md-table-cell>
                 <md-table-cell>
                   <md-list class="md-triple-line">
                     <md-list-item>
                       <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                        <b>Speaker Reception</b>
+                        <span>Parking VIP #2</span>
                       </div>
                     </md-list-item>
-
                   </md-list>
                 </md-table-cell>
               </md-table-row>
               <md-table-row>
-                <md-table-cell>5.00 am</md-table-cell>
+                <md-table-cell>12.00 am - 2 pm</md-table-cell>
                 <md-table-cell>
                   <md-list class="md-triple-line">
                     <md-list-item>
                       <div class="md-list-item-text">
-                        <b>Shift-Name</b>
-                        <span>Location X</span>
-                        <p>I'll be in your neighborhood doing errands this week. Do you want to meet?</p>
+                        <b>Food & Drinks</b>
+                        <span>Food Menu/Bar</span>
                       </div>
                     </md-list-item>
-
                   </md-list>
                 </md-table-cell>
               </md-table-row>
@@ -98,18 +117,209 @@
           </md-tab>
 
           <md-tab id="tab-pages" md-label="28.05.2018">
-            Pages tab
-            <p>Unde provident nemo reiciendis officia, possimus repellendus. Facere dignissimos dicta quis rem. Aliquam aspernatur dolor atque nisi id deserunt laudantium quam repellat.</p>
+            <md-table class="nohover">
+              <md-table-row>
+                <md-table-head width="200px">Time</md-table-head>
+                <md-table-head>Shifts</md-table-head>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>9.00 am - 1 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Security Check-In</b>
+                        <span>Entrance, House 3</span>
+                        <p>Check-In the participants</p>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>9.00 am - 4 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Wardrobe</b>
+                        <span>Wardrobe Room (across from the Check-In)</span>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Light</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Sound</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Video</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>10.00 am - 4 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Speaker Reception</b>
+                        <span>Parking VIP #2</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>12.00 am - 2 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Food & Drinks</b>
+                        <span>Food Menu/Bar</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+            </md-table>
           </md-tab>
 
           <md-tab id="tab-posts" md-label="29.05.2018">
-            Posts tab
-            <p>Qui, voluptas repellat impedit ducimus earum at ad architecto consectetur perferendis aspernatur iste amet ex tempora animi, illum tenetur quae assumenda iusto.</p>
-          </md-tab>
+            <md-table class="nohover">
+              <md-table-row>
+                <md-table-head width="200px">Time</md-table-head>
+                <md-table-head>Shifts</md-table-head>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>9.00 am - 1 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Security - Check-In</b>
+                        <span>Entrance, House 3</span>
+                        <p>Check-In the participants</p>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>9.00 am - 4 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Wardrobe</b>
+                        <span>Wardrobe Room (across from the Check-In)</span>
+                      </div>
+                    </md-list-item>
 
-          <md-tab id="tab-favorites" md-label="30.05.2018">
-            Favorites tab
-            <p>Maiores, dolorum. Beatae, optio tempore fuga odit aperiam velit, consequuntur magni inventore sapiente alias sequi odio qui harum dolorem sunt quasi corporis.</p>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Light</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Sound</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>11.00 am - 3 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Tech - Video</b>
+                        <span>Tech Operation</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>10.00 am - 4 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Speaker Reception</b>
+                        <span>Parking VIP #2</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>12.00 am - 2 pm</md-table-cell>
+                <md-table-cell>
+                  <md-list class="md-triple-line">
+                    <md-list-item>
+                      <div class="md-list-item-text">
+                        <b>Food & Drinks</b>
+                        <span>Food Menu/Bar</span>
+                      </div>
+                    </md-list-item>
+                  </md-list>
+                </md-table-cell>
+              </md-table-row>
+            </md-table>
           </md-tab>
         </md-tabs>
         <div class="option createShift">

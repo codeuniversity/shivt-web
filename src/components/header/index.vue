@@ -24,7 +24,15 @@
     name: 'App',
     data () {
       return {
-        section: 'Head'
+        section: 'Head',
+        events: [
+          {
+            name: 'Conference #2'
+          },
+          {
+            name: 'Conference #2'
+          }
+        ]
       }
     },
     methods: {
@@ -49,7 +57,7 @@ header{
   top: 0px;
   left: 0px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-  z-index: 1;
+  z-index: 4;
   .center{
     width: 1200px;
     position: relative;

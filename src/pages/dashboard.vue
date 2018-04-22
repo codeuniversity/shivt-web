@@ -10,71 +10,25 @@
         </div>
         <div class="box-body">
           <md-field>
-            <label>Initial Value</label>
-            <md-input v-model="initial"></md-input>
+            <label>Name</label>
+            <md-input v-model="form.name">UNICON 2019</md-input>
           </md-field>
-
           <md-field>
-            <label>Initial Value (Read Only)</label>
-            <md-input v-model="initial" readonly></md-input>
+            <label>Description</label>
+            <md-textarea v-model="form.description"></md-textarea>
           </md-field>
-
+          <md-datepicker v-model="form.startDate">
+            <label>Start date</label>
+          </md-datepicker>
+          <md-datepicker v-model="form.endDate">
+            <label>End date</label>
+          </md-datepicker>
           <md-field>
-            <label>Type here!</label>
-            <md-input v-model="type"></md-input>
-            <span class="md-helper-text">Helper text</span>
-          </md-field>
-
-          <md-field>
-            <label>With label</label>
-            <md-input v-model="withLabel" placeholder="A nice placeholder"></md-input>
-          </md-field>
-
-          <md-field md-inline>
-            <label>Inline</label>
-            <md-input v-model="inline"></md-input>
-          </md-field>
-
-          <md-field>
-            <label>Number</label>
-            <md-input v-model="number" type="number"></md-input>
-          </md-field>
-
-          <md-field>
-            <label>Textarea</label>
-            <md-textarea v-model="textarea"></md-textarea>
-          </md-field>
-
-          <md-field>
-            <label>Textarea with Autogrow</label>
-            <md-textarea v-model="autogrow" md-autogrow></md-textarea>
-          </md-field>
-
-          <md-field>
-            <label>Disabled</label>
-            <md-input v-model="disabled" disabled></md-input>
-          </md-field>
-          <md-datepicker v-model="selectedDate" />
-          <md-checkbox v-model="array" value="1">Array</md-checkbox>
-          <md-checkbox v-model="array" value="2">Array</md-checkbox>
-          <md-checkbox v-model="boolean">Boolean</md-checkbox>
-          <br/><br/>
-          <md-radio v-model="radio" value="accent">Accent <small>(Default)</small></md-radio>
-          <md-radio v-model="radio" value="Primary" class="md-primary">Primary</md-radio>
-          <md-field>
-            <label for="movie">Movie</label>
-            <md-select v-model="movie" name="movie" id="movie">
-              <md-option value="fight-club">Fight Club</md-option>
-              <md-option value="godfather">Godfather</md-option>
-              <md-option value="godfather-ii">Godfather II</md-option>
-              <md-option value="godfather-iii">Godfather III</md-option>
-              <md-option value="godfellas">Godfellas</md-option>
-              <md-option value="pulp-fiction">Pulp Fiction</md-option>
-              <md-option value="scarface">Scarface</md-option>
-            </md-select>
+            <label>Location</label>
+            <md-input v-model="form.location"></md-input>
           </md-field>
           <div class="options right">
-            <button @click="openCreatePopup">Save Configuration</button>
+            <button>Save Configuration</button>
           </div>
         </div>
       </div>
@@ -85,6 +39,17 @@
 <script>
 export default {
   name: 'Dashboard',
+  data () {
+    return {
+      form: {
+        name: 'UNICON 2019',
+        description: 'Connecting 99 students from top-tier universities and diverse backgrounds through tech.',
+        location: 'CODE UNIVERSITY',
+        startDate: new Date('2019/03/26'),
+        endDate: new Date('2019/03/29'),
+      }
+    }
+  },
   methods: {
     test() {
       this.$notify({
@@ -104,4 +69,7 @@ export default {
   margin-top: 15px;
   margin-bottom: 40px;
 }
+  i{
+    display: none;
+  }
 </style>
