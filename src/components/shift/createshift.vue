@@ -39,7 +39,6 @@
                 </md-select>
               </md-field>
               <md-datepicker v-model="selectedDate">
-                <label>Date</label>
               </md-datepicker>
               <md-field>
                 <label for="first-name">Time</label>
