@@ -5,7 +5,7 @@
       <div class="box">
         <div class="box-heading">
           <div class="text">
-            <h2>Create shivt</h2>
+            <h2>Update shivt</h2>
             <small>Manage your shifts.</small>
           </div>
           <div class="options" @click="closePopup">
@@ -92,7 +92,7 @@
         </div>
         <div class="box-body">
           <div class="options">
-            <button @click="submit">Create Shift</button>
+            <button @click="submit">Save</button>
           </div>
         </div>
       </div>
@@ -158,6 +158,9 @@
   }
 </script>
 <style lang="less" scoped>
+  .md-steppers-wrapper{
+    width: 100%;
+  }
   .popup {
     display: none;
     &.active{

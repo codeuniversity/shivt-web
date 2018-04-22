@@ -224,6 +224,7 @@
       float: left;
     }
     .md-steppers-wrapper{
+      width: 100%;
       max-height: 623px;
       overflow: auto;
     }

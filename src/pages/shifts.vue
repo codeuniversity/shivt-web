@@ -113,30 +113,37 @@
           </md-tab>
         </md-tabs>
         <div class="option createShift">
-          <button @click="openPopup">Add Shift</button>
+          <button @click="openCreatePopup">Add Shift</button>
         </div>
       </div>
     </div>
-    <Popup v-model="popupActive" :active="popupActive"/>
+    <CreateShiftPopup v-model="popupCreateActive" :active="popupCreateActive"/>
+    <UpdateShiftPopup v-model="popupUpdateActive" :active="popupUpdateActive"/>
   </div>
 </template>
 
 <script>
-  import Popup from '@/components/shift/createshift'
+  import CreateShiftPopup from '@/components/shift/createshift'
+  import UpdateShiftPopup from '@/components/shift/updateshift'
   export default {
     name: 'Shifts',
     components: {
-      Popup
+      CreateShiftPopup,
+      UpdateShiftPopup
     },
     data () {
       return {
-        popupActive: false,
+        popupCreateActive: false,
+        popupUpdateActive: false,
         showDate: new Date()
       }
     },
     methods: {
-      openPopup(){
-        this.popupActive = true
+      openCreatePopup(){
+        this.popupCreateActive = true
+      },
+      openUpdatePopup(){
+        this.popupUpdateActive = true
       },
       setShowDate(d) {
         this.showDate = d

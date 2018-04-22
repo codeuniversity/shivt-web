@@ -8,9 +8,10 @@
         </div>
       </div>
       <div class="menu">
-        <router-link class="link" :to="{name: 'dashboard'}">Dashboard</router-link>
+        <router-link class="link" :to="{name: 'dashboard'}">Configuration</router-link>
         <router-link class="link" :to="{name: 'employees'}">Employees</router-link>
         <router-link class="link" :to="{name: 'shifts'}">Shifts</router-link>
+        <router-link class="link" :to="{name: 'shifts'}">Skills</router-link>
         <a class="link">Settings</a>
         <a class="link" @click="logout">Logout</a>
       </div>
