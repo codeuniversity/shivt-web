@@ -11,8 +11,7 @@
         <router-link class="link" :to="{name: 'dashboard'}">Configuration</router-link>
         <router-link class="link" :to="{name: 'employees'}">Employees</router-link>
         <router-link class="link" :to="{name: 'shifts'}">Shifts</router-link>
-        <router-link class="link" :to="{name: 'shifts'}">Skills</router-link>
-        <a class="link">Settings</a>
+        <router-link class="link" :to="{name: 'skills'}">Skills</router-link>
         <a class="link" @click="logout">Logout</a>
       </div>
     </div>
